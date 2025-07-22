@@ -1,12 +1,23 @@
-import { useState } from 'react'
+import { GlobalProvider } from "./context/GlobalContext.jsx";
+import DefaultLayout from "../src/layout/DefaultLayout.jsx";
+import { Routes, Route, BrowserRouter } from "react-router-dom";
+
+import HomePage from "./pages/HomePage.jsx";
+import ConversionPage from "./pages/ConversionPage.jsx";
 
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
-    <>
-      <h1 className='text-center'>APP</h1>
-    </>
+    <GlobalProvider>
+      <BrowserRouter>
+        <Routes>
+          <Route element={<DefaultLayout />}>
+            <Route index element={<HomePage />} />
+            <Route path="/convert" element={<ConversionPage />} />
+          </Route>
+        </Routes>
+      </BrowserRouter>
+    </GlobalProvider>
   )
 }
 
