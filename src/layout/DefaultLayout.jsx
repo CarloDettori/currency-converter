@@ -1,17 +1,16 @@
 import { Outlet } from "react-router-dom";
-import Header from "../layout/Header.jsx"
-import Footer from "../layout/Footer.jsx"
+import SidebarComponent from "../layout/SidebarComponent.jsx"
 
 export default function DefaultLayout() {
 
 
     return (
-        <>
-            <Header />
-            <main>
+        <main className="flex p-10">
+            <SidebarComponent />
+            <section className="  rounded-xl w-full">
                 <Outlet />
-            </main>
-            <Footer />
-        </>
+            </section>
+        </main>
+
     )
 }

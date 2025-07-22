@@ -1,3 +1,8 @@
+import ConverterComponent from "../components/ConverterComponent"
+
 export default function ConversionPage() {
-    return <h1>CONVERSION PAGE</h1>
+
+    return <>
+        <ConverterComponent />
+    </>
 }

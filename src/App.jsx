@@ -12,8 +12,8 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route element={<DefaultLayout />}>
-            <Route index element={<HomePage />} />
-            <Route path="/convert" element={<ConversionPage />} />
+            <Route path="/" element={<HomePage />} />
+            <Route path="/conversioni" element={<ConversionPage />} />
           </Route>
         </Routes>
       </BrowserRouter>
