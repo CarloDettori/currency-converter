@@ -8,7 +8,7 @@ Le valute presenti come options nelle select sono prese dall’API Frankfurter, 
 La grafica nell’anteprima è di esempio, potete realizzarla come preferite.
 
 **Milestone 1**
-Creare un componente che contenga un campo di input una select.
+Creare un componente che contenga un campo di input e una select.
 Questo componente servirà sia per il primo input che per il secondo ricevendo tramite props la lista delle valute.
 
 **Milestone 2**
@@ -28,3 +28,17 @@ Aggiungere un componente che contenga il grafico (potete utilizzare la libreria 
 
 **Bonus 3**
 Utilizzare axios con **async**/**await** al posto della sintassi **then**/**catch**.
+
+
+
+Questa API riceverà il valore del campo appena modificato e le due valute per la conversione quindi la chiamata avverrà al `keyup` del’input.
+
+Nella chiamata all'API bisogna mettere in `from` la valuta selezionata e `to` l'altra.  Ad esempio, nella situazione di default se scrivo **5** nelll'input di **EUR** l'endpoint sarà: /`latest?amount=5&from=EUR&to=USD` mentre se scivo **5** nel campo relativo a **USD** l'endpoint sarà `/latest?amount=5&from=USD&to=EUR`
+
+Diversamente, al cambio della select l’enpoint sarà sempre lo stesso ma l’ordine from/to sarà sempre in relazione al primo e secondo input
+
+# Reference
+
+- **API**: https://www.frankfurter.app/docs/
+- **Sintassi async/await**: https://www.html.it/pag/69778/funzioni-asincrone-con-asyncawait/ (in questo articolo si parla di `fetch()` mentre per noi il discorso è in relazione a `axios().then()` , la logica è la stessa)
+- **Apex Charts**: https://apexcharts.com/docs/

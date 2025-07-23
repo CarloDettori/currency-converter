@@ -13,7 +13,7 @@ function App() {
         <Routes>
           <Route element={<DefaultLayout />}>
             <Route path="/" element={<HomePage />} />
-            <Route path="/conversioni" element={<ConversionPage />} />
+            <Route path="/convert" element={<ConversionPage />} />
           </Route>
         </Routes>
       </BrowserRouter>
